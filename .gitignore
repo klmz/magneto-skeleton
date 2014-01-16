@@ -1,0 +1,15 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+.factorypath
+.settings/
+.project
+.classpath
+target/
+
+# Other files #
+./config.properties

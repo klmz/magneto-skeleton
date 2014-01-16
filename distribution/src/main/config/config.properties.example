@@ -1,0 +1,18 @@
+magneto.chat.server.host = yourXmmpHost
+
+# The port. 5222 is default. 5223 is for SSL.
+magneto.chat.server.port = 5222
+
+# The server that hosts the configuration
+magneto.conf.server.host =
+
+# The client's username. Default is magneto.
+# magneto.chat.user.username = magneto
+
+# The client's display name. Default is Magneto.
+# magneto.chat.user.displayname = Magneto
+
+magneto.chat.user.password =
+
+# The mention name magneto should respond to. Defaults to magneto.
+# magneto.char.user.mention =
