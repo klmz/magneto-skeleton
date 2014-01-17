@@ -29,7 +29,7 @@
 		<dependencySet>
 			<outputDirectory>/lib</outputDirectory>
 			<excludes>
-				<exclude>me.magnet:>magneto-magnetme-distribution</exclude>
+				<exclude>com.yourcompany:yourcompany-magneto-skeleton</exclude>
 			</excludes>
 		</dependencySet>
 	</dependencySets>

@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.yourcompany</groupId>
-		<artifactId>yourcompany-magnetme</artifactId>
+		<artifactId>yourcompany-magneto-skeleton</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>magneto-magnetme-distribution</artifactId>
+	<artifactId>your-magneto-distribution</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -44,7 +44,7 @@
 					</archive>
 					<excludes>
 						<exclude>logback.xml</exclude>
-						<exclude>app.properties</exclude>
+						<exclude>config.properties</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
