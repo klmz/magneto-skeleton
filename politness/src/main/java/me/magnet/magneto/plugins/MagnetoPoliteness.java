@@ -36,7 +36,7 @@ public class MagnetoPoliteness implements MagnetoPlugin {
 	/*
 	 * Responds to basic expressions of gratitude with a random predefined response.
 	 */
-	@RespondTo("\\b([tT]hanks|ty|TY|[tT]hank you).*")
+	@RespondTo("\\b(thanks|ty|thank you).*")
 	public Response thanks() {
 		int random = randomGen.nextInt(RESPONSES.length);
 		return Response.fireAndForget().sendMessage(RESPONSES[random]);
@@ -45,7 +45,7 @@ public class MagnetoPoliteness implements MagnetoPlugin {
 	/*
 	 * Answer to greetings with a random predefined response.
 	 */
-	@RespondTo("\\b([Hh]ello|[Hh]i).*")
+	@RespondTo("\\b(hello|hi).*")
 	public Response hi() {
 		int random = randomGen.nextInt(WELCOMES.length);
 		return Response.fireAndForget().sendMessage(WELCOMES[random]);
