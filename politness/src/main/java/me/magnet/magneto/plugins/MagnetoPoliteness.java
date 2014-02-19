@@ -2,8 +2,7 @@ package me.magnet.magneto.plugins;
 
 import java.util.Random;
 
-import com.google.common.collect.ImmutableList;
-import me.magnet.magneto.Response;
+import me.magnet.magneto.ChatRoom;
 import me.magnet.magneto.annotations.RespondTo;
 
 public class MagnetoPoliteness implements MagnetoPlugin {
@@ -25,42 +24,40 @@ public class MagnetoPoliteness implements MagnetoPlugin {
 	  "Good day to you!"
 	};
 
-	public static final ImmutableList<String> RULES = ImmutableList.of(
+	public static final String[] RULES = {
 	  "1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.",
 	  "2. A robot must obey any orders given to it by human beings, except where such orders would conflict with the First Law.",
 	  "3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law."
-	);
+	};
 
 	private final Random randomGen = new Random();
 
-	/*
+	/**
 	 * Responds to basic expressions of gratitude with a random predefined response.
 	 */
-	@RespondTo("\\b(thanks|ty|thank you).*")
-	public Response thanks() {
+	@RespondTo(regex = "\\b(thanks|ty|thank you).*")
+	public void thanks(ChatRoom room) {
 		int random = randomGen.nextInt(RESPONSES.length);
-		return Response.fireAndForget().sendMessage(RESPONSES[random]);
+		room.sendMessage(RESPONSES[random]);
 	}
 
-	/*
+	/**
 	 * Answer to greetings with a random predefined response.
 	 */
-	@RespondTo("\\b(hello|hi).*")
-	public Response hi() {
+	@RespondTo(regex = "\\b(hello|hi).*")
+	public void hi(ChatRoom room) {
 		int random = randomGen.nextInt(WELCOMES.length);
-		return Response.fireAndForget().sendMessage(WELCOMES[random]);
+		room.sendMessage(WELCOMES[random]);
 	}
 
-	/*
+	/**
 	 * Report the rules.
 	 */
-	@RespondTo("\\bthe rules")
-	public Response theRules() {
-		Response response = Response.fireAndForget();
+	@RespondTo(regex = "\\bthe rules", description = "See if Magneto remembers the rules")
+	public void theRules(ChatRoom room) {
 		for (String rule : RULES) {
-			response.sendMessage(rule);
+			room.sendMessage(rule);
 		}
-		return response;
 	}
 
 	@Override

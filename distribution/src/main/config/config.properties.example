@@ -1,0 +1,17 @@
+magneto.chat.server.host = chat.hipchat.com
+magneto.chat.server.port = 5222
+magneto.conf.server.host = conf.hipchat.com
+
+# The jabber username of Magneto
+magneto.chat.user.username = xxxxx_xxxxx
+
+# Jabber password for magneto
+magneto.chat.user.password = DrudRed2
+
+magneto.chat.user.displayname = Magneto AI
+
+# The mention name magneto should respond to
+magneto.char.user.mention = magneto
+
+# The HipChat token so Magneto can send HTML
+magneto.chat.hipchat.token = fcrIyIRnGYD48pPwbMPOcXQ6zKO4klDjpOC6PVtY
